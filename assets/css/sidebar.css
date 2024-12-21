@@ -1,0 +1,49 @@
+.sidebar {
+    background-color: var(--sidebar-bg);
+    height: 100vh;
+    padding: 2rem 1.5rem 0 1.5rem;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 1px 0 0 #494949;
+    gap: 2rem;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    background-color: #2d3436;
+    border-radius: 50%;
+  }
+  
+  .nav-search {
+    width: 40px;
+    height: 40px;
+    margin: 1.5rem 0 4rem 0;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-secondary);
+  }
+  
+  .nav-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-secondary);
+  }
+  
+  .user-profile {
+    margin-top: 60px;
+  }
+  
+  .nav-item:hover {
+    background-color: #e9ecef;
+  }
