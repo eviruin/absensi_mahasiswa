@@ -1,3 +1,9 @@
-tugas kelompok 1
+tugas akhir sistem berkas
+03tple003
 
-taofik hidayat 231011402713
+
+kelompok 1:
+
+Muhammad Fazrian 231011400561
+Arasy yamranzam maulana 231011402564
+Taofik Hidayat 231011402713
