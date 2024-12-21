@@ -7,3 +7,6 @@ kelompok 1:
 1. Muhammad Fazrian 231011400561
 2. Arasy yamranzam maulana 231011402564
 3. Taofik Hidayat 231011402713
+
+username: admin@gmail.com
+password: admin
