@@ -4,6 +4,6 @@ tugas akhir sistem berkas
 
 kelompok 1:
 
-Muhammad Fazrian 231011400561
-Arasy yamranzam maulana 231011402564
-Taofik Hidayat 231011402713
+1. Muhammad Fazrian 231011400561
+2. Arasy yamranzam maulana 231011402564
+3. Taofik Hidayat 231011402713
