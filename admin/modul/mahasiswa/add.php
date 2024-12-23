@@ -39,7 +39,7 @@
   <tr>
     <td>NIM</td>
     <td>:</td>
-    <td><input name="nis" type="text" class="form-control" placeholder="NIM">	</td>
+    <td><input name="nim" type="text" class="form-control" placeholder="NIM">	</td>
   </tr>
   <tr>
     <td>Tempat,Tanggal Lahir </td>

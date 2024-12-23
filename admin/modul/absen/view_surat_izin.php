@@ -29,9 +29,9 @@ foreach ($izin as $d)
 		<td><strong> <?=$d['nama_mahasiswa'];?> </strong></td>
 		</tr>
 		<tr>
-			<td>Nis</td>
+			<td>Nim</td>
 			<td>:</td>
-			<td><?=$d['nis'];?></td>
+			<td><?=$d['nim'];?></td>
 		</tr>
 		<tr>
 			<td>Gender</td>

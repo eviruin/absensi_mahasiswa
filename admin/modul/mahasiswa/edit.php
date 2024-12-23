@@ -46,7 +46,7 @@ foreach ($edit as $d)?>
   <tr>
     <td>NIM</td>
     <td>:</td>
-    <td><input name="nis" type="text" class="form-control" value="<?=$d['nis'] ?>" readonly>	</td>
+    <td><input name="nim" type="text" class="form-control" value="<?=$d['nim'] ?>" readonly>	</td>
   </tr>
   <tr>
     <td>Tempat,Tanggal Lahir </td>

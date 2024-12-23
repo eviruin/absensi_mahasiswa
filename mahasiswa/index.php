@@ -1,25 +1,45 @@
 <?php
 @session_start();
- include '../config/db.php';
+include '../config/db.php';
 
+// Pastikan sesi mahasiswa sudah diatur
 if (!isset($_SESSION['mahasiswa'])) {
-?> <script>
-    alert('Maaf ! Anda Belum Login !!');
-    window.location='../user.php';
- </script>
-<?php
+    echo "<script>
+        alert('Maaf! Anda Belum Login!');
+        window.location='../user.php';
+    </script>";
+    exit();
 }
- ?>
 
+// Ambil ID mahasiswa dari sesi
+$id_login = $_SESSION['mahasiswa'];
 
-   <?php
-$id_login = @$_SESSION['mahasiswa'];
-$sql = mysqli_query($con,"SELECT * FROM tb_mahasiswa
-	INNER JOIN tb_mkelas ON tb_mahasiswa.id_mkelas=tb_mkelas.id_mkelas
- WHERE tb_mahasiswa.id_mahasiswa = '$id_login'") or die(mysqli_error($con));
+// Pastikan koneksi database berhasil
+if (!$con) {
+    die("Koneksi ke database gagal: " . mysqli_connect_error());
+}
+
+// Query untuk mengambil data mahasiswa
+$sql = mysqli_query($con, "SELECT * FROM tb_mahasiswa
+    INNER JOIN tb_mkelas ON tb_mahasiswa.id_mkelas = tb_mkelas.id_mkelas
+    WHERE tb_mahasiswa.id_mahasiswa = '$id_login'");
+
+// Validasi apakah query berhasil
+if (!$sql) {
+    die("Error pada query: " . mysqli_error($con));
+}
+
+// Ambil hasil query
 $data = mysqli_fetch_array($sql);
 
-
+// Validasi apakah data ditemukan
+if (!$data) {
+    echo "<script>
+        alert('Data mahasiswa tidak ditemukan!');
+        window.location='../user.php';
+    </script>";
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +75,6 @@ $data = mysqli_fetch_array($sql);
 			<div class="logo-header" data-background-color="blue">
 				
 				<a href="index.php" class="logo">
-					<!-- <img src="../assets/img/mts.png" alt="navbar brand" class="navbar-brand" width="40"> -->
 					<b class="text-white">UNIVERSITAS PAMULANG</b>
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">

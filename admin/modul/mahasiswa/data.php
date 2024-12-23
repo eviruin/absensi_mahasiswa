@@ -51,7 +51,7 @@
                         foreach ($mahasiswa as $g) {?>
                         <tr>
                             <td><?=$no++;?>.</td>                          
-                            <td><?=$g['nis'];?></td>
+                            <td><?=$g['nim'];?></td>
                             <td><?=$g['nama_mahasiswa'];?></td>
                             <td><?=$g['nama_kelas'];?></td>
                             <td><?=$g['th_angkatan'];?></td>
