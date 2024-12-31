@@ -520,7 +520,7 @@ $data = mysqli_fetch_array($sql);
             <footer class="footer">
                 <div class="container">
                     <div class="copyright ml-auto">
-                        &copy; <?php echo date('Y');?> Absensi Universitas Pamulang (<a href="index.php">Taofik Hidayat
+                        &copy; <?php echo date('Y');?> Absensi Universitas Pamulang (<a href="index.php">Kelompok 1
                         </a> | 2024)
                     </div>
                 </div>
