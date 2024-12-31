@@ -300,7 +300,7 @@ WHERE tb_mengajar.id_dosen='$data[id_dosen]' AND tb_thajaran.status=1 ");
 		<footer class="footer">
 				<div class="container">
 					<div class="copyright ml-auto">
-						&copy; <?php echo date('Y');?> Absensi UNIVERSITAS PAMULANG (<a href="index.php">Abid Taufiqur Rohman </a> | 2021)
+						&copy; <?php echo date('Y');?> Absensi UNIVERSITAS PAMULANG (<a href="index.php">Kelompok 1 </a> | 2024)
 					</div>				
 				</div>
 			</footer>
