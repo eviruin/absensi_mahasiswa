@@ -2,7 +2,6 @@
 @session_start();
 include '../config/db.php';
 
-// Pastikan sesi mahasiswa sudah diatur
 if (!isset($_SESSION['mahasiswa'])) {
     echo "<script>
         alert('Maaf! Anda Belum Login!');
@@ -11,10 +10,8 @@ if (!isset($_SESSION['mahasiswa'])) {
     exit();
 }
 
-// Ambil ID mahasiswa dari sesi
 $id_login = $_SESSION['mahasiswa'];
 
-// Pastikan koneksi database berhasil
 if (!$con) {
     die("Koneksi ke database gagal: " . mysqli_connect_error());
 }
@@ -24,7 +21,7 @@ $sql = mysqli_query($con, "SELECT * FROM tb_mahasiswa
     INNER JOIN tb_mkelas ON tb_mahasiswa.id_mkelas = tb_mkelas.id_mkelas
     WHERE tb_mahasiswa.id_mahasiswa = '$id_login'");
 
-// Validasi apakah query berhasil
+// Validasi query
 if (!$sql) {
     die("Error pada query: " . mysqli_error($con));
 }
@@ -32,7 +29,6 @@ if (!$sql) {
 // Ambil hasil query
 $data = mysqli_fetch_array($sql);
 
-// Validasi apakah data ditemukan
 if (!$data) {
     echo "<script>
         alert('Data mahasiswa tidak ditemukan!');
